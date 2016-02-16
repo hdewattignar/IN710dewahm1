@@ -30,12 +30,13 @@ namespace WindowsFormsApplication1
                 for (int r = 0; r < rowCount; r++)
                 {
                     //Add code here. DO NOT declare any new variables
+
                     if (r == 0)
                     {
-                        oneDimensional[c * 2] = twoDimensional[c, r];
+                        oneDimensional[(c * rowCount) ] = twoDimensional[c, r];
                     }
                     else
-                        oneDimensional[(c * 2) + 1] = twoDimensional[c, r];
+                        oneDimensional[(c * rowCount) + rowCount - 1] = twoDimensional[c, r];
                 }
 
             //printing one dimensional array
