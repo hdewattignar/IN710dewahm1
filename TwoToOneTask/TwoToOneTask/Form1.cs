@@ -31,12 +31,14 @@ namespace WindowsFormsApplication1
                 {
                     //Add code here. DO NOT declare any new variables
 
-                    if (r == 0)
-                    {
-                        oneDimensional[(c * rowCount) ] = twoDimensional[c, r];
-                    }
-                    else
-                        oneDimensional[(c * rowCount) + rowCount - 1] = twoDimensional[c, r];
+                    oneDimensional[(r * rowCount) + c] = twoDimensional[c, r];
+
+                    //if (r == 0)
+                    //{
+                    //    oneDimensional[(c * rowCount) ] = twoDimensional[c, r];
+                    //}
+                    //else
+                        //oneDimensional[(c * rowCount) + 1] = twoDimensional[c, r];
                 }
 
             //printing one dimensional array
