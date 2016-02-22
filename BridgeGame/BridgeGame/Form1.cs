@@ -18,5 +18,14 @@ namespace BridgeGame
         }
 
         Game game = new Game();
+
+        private void playButton_Click(object sender, EventArgs e)
+        {
+            game.PlayGame();
+
+            string displayString = game.DisplayHands();
+
+            cardDisplay.Text = displayString;
+        }
     }
 }

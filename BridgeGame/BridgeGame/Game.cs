@@ -34,14 +34,23 @@ namespace BridgeGame
         }
                 
 
-        public void DisplayScores()
-        { 
-                                
+        public String DisplayScores()
+        {
+            String displayScores = "";
+
+            return displayScores;
         }
 
-        public void DisplayHands()
+        public String DisplayHands()
         {
+            String displayString = "";
 
+            for (int i = 0; i < players.Length; i++)
+            {
+                displayString += players[i].DisplayHand();
+            }
+
+            return displayString;
         }
     
     }   

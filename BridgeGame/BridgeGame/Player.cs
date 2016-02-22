@@ -16,6 +16,7 @@ namespace BridgeGame
         {
             this.playerName = playerName;
             handScore = 0;
+            hand = new Card[13];
         }
         
         public void newHand(Card[] newHand)
@@ -51,22 +52,22 @@ namespace BridgeGame
 
                 if (hand[i].getSuit() == "S")
                 {
-                    spades += hand[i].ToString();
+                    spades += hand[i].getNumber();
                 }
 
                 if (hand[i].getSuit() == "C")
                 {
-                    clubs += hand[i].ToString();
+                    clubs += hand[i].getNumber();
                 }
 
                 if (hand[i].getSuit() == "D")
                 {
-                    diamonds += hand[i].ToString();
+                    diamonds += hand[i].getNumber();
                 }
 
                 if (hand[i].getSuit() == "H")
                 {
-                    hearts += hand[i].ToString();
+                    hearts += hand[i].getNumber();
                 }
             }
 

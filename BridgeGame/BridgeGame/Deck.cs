@@ -10,7 +10,7 @@ namespace BridgeGame
     {
         private Card[] deck;
         private string[] suit;
-        private string[] value;
+        private string[] value;        
 
         public Deck()
         {
@@ -24,11 +24,13 @@ namespace BridgeGame
 
         public void CreateDeck()
         {
+            int count = 0;
+
             for (int i = 0; i < suit.Length; i++)
             {
                 for (int j = 0; j < value.Length; j++)
                 {
-                    deck[(i + 1) * (j+ 1)] = new Card(suit[i], value[j], 0);
+                    deck[count++] = new Card(suit[i], value[j]);
                 }
             }
         }
@@ -64,9 +66,9 @@ namespace BridgeGame
             }
 
             players[0].newHand(player1Hand);
-            players[2].newHand(player2Hand);
-            players[3].newHand(player3Hand);
-            players[4].newHand(player4Hand);
+            players[1].newHand(player2Hand);
+            players[2].newHand(player3Hand);
+            players[3].newHand(player4Hand);
 
             return players;
         }
