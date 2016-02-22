@@ -18,3 +18,5 @@ E:\Third year\IN710dewahm1\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFo
 E:\Third year\IN710dewahm1\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 G:\Third year\IN710dewahm1\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 G:\Third year\IN710dewahm1\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+E:\Git\IN710dewahm1\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+E:\Git\IN710dewahm1\Dealer 2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

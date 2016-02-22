@@ -1,1 +1,2 @@
 E:\Third year\IN710dewahm1\BridgeGame\BridgeGame\bin\Debug\BridgeGame.exe.config
+E:\Git\IN710dewahm1\BridgeGame\BridgeGame\bin\Debug\BridgeGame.exe.config
