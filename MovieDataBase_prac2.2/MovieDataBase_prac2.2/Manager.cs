@@ -9,11 +9,11 @@ namespace MovieDataBase_prac2._2
     class Manager
     {
 
-        Dictionary<int, Movie> movieTable { get; set; }
+        SortedDictionary<int, Movie> movieTable { get; set; }
 
         public Manager()
         {
-            movieTable = new Dictionary<int, Movie>();
+            movieTable = new SortedDictionary<int, Movie>();
 
             Movie movie1 = new Movie(1961, "WestSide Story", "Jerome Robbins");
             Movie movie2 = new Movie(1972, "The Godfather", "Francis Ford Coppola");
@@ -27,7 +27,7 @@ namespace MovieDataBase_prac2._2
         }
 
         //returns the dictionary of all movies
-        public Dictionary<int, Movie> getMovies()
+        public SortedDictionary<int, Movie> getMovies()
         {
             return movieTable;
         }
