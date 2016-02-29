@@ -9,9 +9,11 @@ namespace MovieDataBase_prac2._2
     class Manager
     {
 
+        Dictionary<int, Movie> movieTable { get; set; }
+
         public Manager()
         {
-            Dictionary<int, Movie> movieTable = new Dictionary<int, Movie>();
+            movieTable = new Dictionary<int, Movie>();
 
             Movie movie1 = new Movie(1961, "WestSide Story", "Jerome Robbins");
             Movie movie2 = new Movie(1972, "The Godfather", "Francis Ford Coppola");
@@ -22,6 +24,32 @@ namespace MovieDataBase_prac2._2
             movieTable.Add(movie2.Year, movie2);
             movieTable.Add(movie3.Year, movie3);
             movieTable.Add(movie4.Year, movie4);
+        }
+
+        //returns the dictionary of all movies
+        public Dictionary<int, Movie> getMovies()
+        {
+            return movieTable;
+        }
+
+        //gets a movie from the dictionary 
+        public Movie getMovie(int key)
+        {
+            
+            return movieTable[key];
+        }
+
+        //adds a movie to the dictionary
+        public void AddMovie(int year, String title, String director)
+        {
+            Movie movie = new Movie(year, title, director);
+            movieTable.Add(movie.Year, movie);
+        }
+
+        //delete a movie from the dictionary
+        public void DeleteMovie(int key)
+        {            
+            movieTable.Remove(key);             
         }
     }
 }

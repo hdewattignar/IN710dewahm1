@@ -25,5 +25,7 @@ namespace MovieDataBase_prac2._2
         {
             return Year.ToString() + ", " + Title + ", " + Director;
         }
+
+        
     }
 }

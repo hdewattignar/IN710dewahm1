@@ -53,6 +53,7 @@
             this.btn_AddMovie.TabIndex = 0;
             this.btn_AddMovie.Text = "Add Movie";
             this.btn_AddMovie.UseVisualStyleBackColor = true;
+            this.btn_AddMovie.Click += new System.EventHandler(this.btn_AddMovie_Click);
             // 
             // lbl_AddMovieYear
             // 
@@ -110,6 +111,7 @@
             this.btn_DeleteMovie.TabIndex = 7;
             this.btn_DeleteMovie.Text = "Delete Movie";
             this.btn_DeleteMovie.UseVisualStyleBackColor = true;
+            this.btn_DeleteMovie.Click += new System.EventHandler(this.btn_DeleteMovie_Click);
             // 
             // txt_DeleteYear
             // 
@@ -135,6 +137,7 @@
             this.btn_SearchMovie.TabIndex = 10;
             this.btn_SearchMovie.Text = "Search";
             this.btn_SearchMovie.UseVisualStyleBackColor = true;
+            this.btn_SearchMovie.Click += new System.EventHandler(this.btn_SearchMovie_Click);
             // 
             // lbl_SearchYear
             // 
@@ -160,6 +163,7 @@
             this.btn_PrintAll.TabIndex = 14;
             this.btn_PrintAll.Text = "Print All";
             this.btn_PrintAll.UseVisualStyleBackColor = true;
+            this.btn_PrintAll.Click += new System.EventHandler(this.btn_PrintAll_Click);
             // 
             // lb_PrintAllDisplay
             // 
