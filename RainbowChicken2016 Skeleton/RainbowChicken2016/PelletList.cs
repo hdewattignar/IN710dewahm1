@@ -29,7 +29,7 @@ namespace RainbowChicken2016
             if (headPointer == null)
             {
                 headPointer = newPellet;
-                tailPointer = newPellet;
+                tailPointer = newPellet;                
             }
             else
             {
@@ -66,6 +66,7 @@ namespace RainbowChicken2016
             while (nodeWalker != null)
             {
                 nodeWalker.Move();
+                nodeWalker = nodeWalker.Next;
             }
         }
 
@@ -83,6 +84,8 @@ namespace RainbowChicken2016
                 {
                     nodeWalker.IsAlive = false;
                 }
+
+                nodeWalker = nodeWalker.Next;
             }
         }
 
@@ -101,9 +104,7 @@ namespace RainbowChicken2016
         //==============================================================================
         public void DeleteNotAlive()
         {
-            Pellet nodeWalker = headPointer;
-
-            
+            Pellet nodeWalker = headPointer;           
 
             while (nodeWalker != null)
             {
@@ -113,10 +114,16 @@ namespace RainbowChicken2016
 
                     while (nw != null)
                     {
- 
-                    }
+                        if (nw.Next == nodeWalker)
+                        {
+                            nw.Next = nodeWalker.Next;
+                        }
 
+                        nw = nw.Next;
+                    }
                 }
+
+                nodeWalker = nodeWalker.Next;
             }
         }
 
@@ -130,6 +137,7 @@ namespace RainbowChicken2016
             while (nodeWalker != null)
             {
                 nodeWalker.Draw();
+                nodeWalker = nodeWalker.Next;
             }
         }
     }
