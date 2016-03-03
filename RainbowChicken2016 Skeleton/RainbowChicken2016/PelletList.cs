@@ -96,7 +96,7 @@ namespace RainbowChicken2016
         //==============================================================================
         public void DeleteOne(Pellet pelletToDelete)
         {
-            throw new NotImplementedException();
+            pelletToDelete.IsAlive = false;
         }
 
         //==============================================================================
@@ -105,22 +105,62 @@ namespace RainbowChicken2016
         public void DeleteNotAlive()
         {
             Pellet nodeWalker = headPointer;           
-
+                        
             while (nodeWalker != null)
             {
                 if (nodeWalker.IsAlive == false)
-                {                    
-                    Pellet nw = headPointer;
+                {
+                    
 
-                    while (nw != null)
+                    //if the node to delete is the only node
+                    if(nodeWalker == headPointer && nodeWalker == tailPointer)
                     {
-                        if (nw.Next == nodeWalker)
-                        {
-                            nw.Next = nodeWalker.Next;
-                        }
-
-                        nw = nw.Next;
+                        //set both head and tail to null
+                        headPointer = null;
+                        tailPointer = null;
                     }
+
+                    // if the node to delete is the head
+                    else if (nodeWalker == headPointer)
+                    {
+                        //set head to the next node in the list
+                        headPointer = nodeWalker.Next;
+                    }
+
+                    //if the node th be deleted is the last node
+                    else if (nodeWalker == tailPointer)
+                    {
+                        Pellet nw = headPointer;
+
+
+                        //find the node before the tail node and moke it the new tail
+                        while (nw != null)
+                        {
+                            if (nw.Next == nodeWalker)
+                            {
+                                tailPointer = nw;
+                            }
+
+                            nw = nw.Next;
+                        }
+                    }
+
+                    //if the node to be deleted is in the middle of the list
+                    else
+                    {
+                        Pellet nw = headPointer;
+
+                        //find the node before the node to be deleted and set it's next to the node after the node to be deleted
+                        while (nw != null)
+                        {
+                            if (nw.Next == nodeWalker)
+                            {
+                                nw.Next = nodeWalker.Next;
+                            }
+
+                            nw = nw.Next;
+                        }
+                    }                  
                 }
 
                 nodeWalker = nodeWalker.Next;
