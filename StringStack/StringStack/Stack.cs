@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StringStack
 {
-    class Stack
+    public class Stack
     {
         StringNode head = null;
         StringNode tail = null;
@@ -38,11 +38,21 @@ namespace StringStack
             {
                 String returnString = tail.nodeString; 
 
+                //get the string from the last added node on stack
                 StringNode nodeWalker = head;
 
+                //remove the last node from the stack
                 while (nodeWalker != null)
                 {
-                    if (nodeWalker.Next == tail)
+                    //if there is only one node on the stack
+                    if (head == tail)
+                    {
+                        head = null;
+                        tail = null;
+                    }
+
+                    //
+                    else if (nodeWalker.Next == tail)
                     {
                         tail = nodeWalker;
                     }
@@ -50,7 +60,7 @@ namespace StringStack
                     nodeWalker = nodeWalker.Next;
                 }                
 
-                return tail.nodeString;                
+                return returnString;                
             }
             else
                 return "";
