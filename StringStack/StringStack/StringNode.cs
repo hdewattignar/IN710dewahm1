@@ -10,7 +10,9 @@ namespace StringStack
 
     class StringNode
     {
-        string nodeString;
+        public string nodeString {get; set; }
+        
+        public StringNode Next { get; set; }
 
         public StringNode(string nodeString)
         {

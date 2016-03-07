@@ -36,3 +36,6 @@ E:\Git\IN710dewahm1\RainbowChicken2016 Skeleton\RainbowChicken2016\obj\Debug\Rai
 E:\Git\IN710dewahm1\RainbowChicken2016 Skeleton\RainbowChicken2016\obj\Debug\RainbowChicken2016.Form1.resources
 E:\Git\IN710dewahm1\RainbowChicken2016 Skeleton\RainbowChicken2016\obj\Debug\RainbowChicken2016.Properties.Resources.resources
 E:\Git\IN710dewahm1\RainbowChicken2016 Skeleton\RainbowChicken2016\obj\Debug\RainbowChicken2016.csproj.GenerateResource.Cache
+H:\My Documents\GitHub\IN710dewahm1\RainbowChicken2016 Skeleton\RainbowChicken2016\bin\Debug\RainbowChicken2016.exe.config
+H:\My Documents\GitHub\IN710dewahm1\RainbowChicken2016 Skeleton\RainbowChicken2016\obj\Debug\RainbowChicken2016.exe
+H:\My Documents\GitHub\IN710dewahm1\RainbowChicken2016 Skeleton\RainbowChicken2016\obj\Debug\RainbowChicken2016.pdb
