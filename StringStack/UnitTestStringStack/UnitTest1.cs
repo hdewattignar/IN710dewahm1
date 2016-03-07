@@ -27,9 +27,25 @@ namespace UnitTestStringStack
         }
 
         [TestMethod]
+        public void IsEmpty_PoppedStackAndRepopulated_ReturnsFalse()
+        {
+            Stack newStack = new Stack();
+            newStack.Push("node 1");
+            newStack.Pop();
+            newStack.Push("node 1");
+
+            Assert.IsFalse(newStack.IsEmpty());
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NullReferenceException))]
         public void Peek_EmptyStack_Exception()
         {
 
+            Stack newStack = new Stack();
+
+            newStack.Peek();
+            
         }
 
         [TestMethod]
@@ -100,7 +116,7 @@ namespace UnitTestStringStack
         }
 
         [TestMethod]
-        public void Push_PushNewItem_NewItemAdded()
+        public void Push_PushToEmptyStack_FirstItemAdded()
         {
             Stack newStack = new Stack();
 
@@ -110,6 +126,26 @@ namespace UnitTestStringStack
             String actual = newStack.Peek();
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Push_PushToPopulatedStack_NewItemAdded()
+        {
+            Stack newStack = new Stack();
+
+            newStack.Push("node 1");
+
+            String expected = "node 1";
+            String actual = newStack.Peek();
+
+            Assert.AreEqual(expected, actual);
+
+            newStack.Push("node 2");
+
+            String expected2 = "node 2";
+            String actual2 = newStack.Peek();
+
+            Assert.AreEqual(expected2, actual2);
         }
 
         [TestMethod]
@@ -124,7 +160,7 @@ namespace UnitTestStringStack
             String actual = newStack.Pop();
 
             Assert.AreEqual(expected, actual);
-        }
+        }        
 
         [TestMethod]
         public void Pop_StackWithItems_ItemRemoved()
@@ -150,9 +186,32 @@ namespace UnitTestStringStack
 
             Assert.AreEqual(expected, actual);
         }
-        public void a()
-        {
 
+        [TestMethod]
+        public void Peek_PeekDoesNotChangeCount_CountReturns2()
+        {
+            Stack newStack = new Stack();           
+
+            newStack.Push("node 1");
+            newStack.Push("node 2");
+
+            newStack.Count();
+            newStack.Peek();
+            newStack.Count();
+
+            int expected = 2;
+            int actual = newStack.Count();
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NullReferenceException))]
+        public void Pop_EmptyStack_Exception()
+        {
+            Stack newStack = new Stack();
+
+            newStack.Pop();
         }
         
     }

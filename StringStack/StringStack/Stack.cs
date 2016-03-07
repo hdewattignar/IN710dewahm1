@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace StringStack
 {
     public class Stack
     {
-        StringNode head = null;
-        StringNode tail = null;
+        
+        StringNode top = null;
 
         public Stack()
         {
@@ -20,67 +21,55 @@ namespace StringStack
         {
             StringNode newNode = new StringNode(newString);
 
-            if (head == null)
-            {
-                head = newNode;
-                tail = newNode;
+            if (top == null)
+            {                
+                top = newNode;
             }
             else
-            {
-                tail.Next = newNode;
-                tail = newNode;
+            {                
+                newNode.Next = top;
+                top = newNode;
             }
         }
 
         public String Pop()
         {
-            if (tail != null)
+            try
             {
-                String returnString = tail.nodeString; 
-
                 //get the string from the last added node on stack
-                StringNode nodeWalker = head;
+                String returnString = top.nodeString;
 
-                //remove the last node from the stack
-                while (nodeWalker != null)
-                {
-                    //if there is only one node on the stack
-                    if (head == tail)
-                    {
-                        head = null;
-                        tail = null;
-                    }
+                //remove the top node from the stack
+                top = top.Next;                
 
-                    //
-                    else if (nodeWalker.Next == tail)
-                    {
-                        tail = nodeWalker;
-                    }
-
-                    nodeWalker = nodeWalker.Next;
-                }                
-
-                return returnString;                
+                return returnString;
             }
-            else
-                return "";
+                //if nothing on the stack
+            catch (NullReferenceException)
+            {
+                throw new NullReferenceException("no items in stack");
+            }
+                
         }
 
         public String Peek()
         {
-            if (tail != null)
+            try
             {
-                return tail.nodeString;
+                return top.nodeString;
             }
-            else
-                return "";
+            catch (NullReferenceException)
+            {
+                throw new NullReferenceException("no items in stack");
+            }            
+            
         }
 
         public int Count()
         {
             int count = 0;
 
-            StringNode nodeWalker = head;
+            StringNode nodeWalker = top;
 
             while (nodeWalker != null)
             {
@@ -93,7 +82,7 @@ namespace StringStack
 
         public bool IsEmpty()
         {
-            if (head == null && tail == null)
+            if (top == null)
             {
                 return true;
             }
