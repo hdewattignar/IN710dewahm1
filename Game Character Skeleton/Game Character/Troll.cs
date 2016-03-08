@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Game_Character
 {
-    class Troll : Character, IWeapon
+    class Troll : Character
     {
-        public Troll(String name)
-            : base(name)
+        public Troll(String name, ListBox listbox)
+            : base(name, listbox)
         {
             weapon = new WeaponKnife();
         }
 
-        public override string Declaim()
+        public override void Declaim()
         {
-            return "Trolls dont have time to chat";
+            listbox.Items.Add("Trolls dont have time to chat");
         }
     }
 }

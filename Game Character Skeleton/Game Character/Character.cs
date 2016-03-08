@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Game_Character
 {
@@ -11,23 +12,30 @@ namespace Game_Character
 
         protected String name;
         protected IWeapon weapon;
+        protected ListBox listbox;
 
-        public Character(String name)
+        public Character(String name, ListBox listbox)
         {
             this.name = name;
+            this.listbox = listbox;
         }
 
-        public String StateName()
+        public virtual String getName()
         {
-            return "My name is " + name;
+            return name;
         }
 
-        public String Battle()
+        public virtual void StateName()
         {
-            return weapon.UseWeapon();
+            listbox.Items.Add("My name is " + name);
         }
 
-        abstract public  String Declaim();   
+        public virtual void Battle()
+        {
+            listbox.Items.Add(weapon.UseWeapon());
+        }
+
+        abstract public void Declaim();   
 
 
     }

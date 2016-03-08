@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Game_Character
 {
     class Queen : Character
     {
-        public Queen(String name)
-            : base(name)
+        public Queen(String name, ListBox listbox)
+            : base(name, listbox)
         {
             weapon = new WeaponBow();
         }
 
-        public override string Declaim()
+        public override void Declaim()
         {
-            return "I am a powerful Queen!";
+            listbox.Items.Add("I am a powerful Queen!");
         }
        
     }
