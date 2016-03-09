@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox_NewType = new System.Windows.Forms.GroupBox();
             this.rdTroll = new System.Windows.Forms.RadioButton();
             this.rdKnight = new System.Windows.Forms.RadioButton();
             this.rdQueen = new System.Windows.Forms.RadioButton();
@@ -44,7 +44,7 @@
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.BattleBox = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox_NewWeapon = new System.Windows.Forms.GroupBox();
             this.rdBow = new System.Windows.Forms.RadioButton();
             this.rdKnife = new System.Windows.Forms.RadioButton();
             this.rdSword = new System.Windows.Forms.RadioButton();
@@ -52,17 +52,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBox_NewType.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBox_NewWeapon.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.groupBox_NewType);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.btnAddCharacter);
             this.panel1.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,19 +81,19 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Name";
             // 
-            // groupBox1
+            // groupBox_NewType
             // 
-            this.groupBox1.Controls.Add(this.rdTroll);
-            this.groupBox1.Controls.Add(this.rdKnight);
-            this.groupBox1.Controls.Add(this.rdQueen);
-            this.groupBox1.Controls.Add(this.rdKing);
-            this.groupBox1.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(272, 18);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(161, 138);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Character Type";
+            this.groupBox_NewType.Controls.Add(this.rdTroll);
+            this.groupBox_NewType.Controls.Add(this.rdKnight);
+            this.groupBox_NewType.Controls.Add(this.rdQueen);
+            this.groupBox_NewType.Controls.Add(this.rdKing);
+            this.groupBox_NewType.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_NewType.Location = new System.Drawing.Point(272, 18);
+            this.groupBox_NewType.Name = "groupBox_NewType";
+            this.groupBox_NewType.Size = new System.Drawing.Size(161, 138);
+            this.groupBox_NewType.TabIndex = 12;
+            this.groupBox_NewType.TabStop = false;
+            this.groupBox_NewType.Text = "Character Type";
             // 
             // rdTroll
             // 
@@ -171,7 +171,7 @@
             this.panel2.Controls.Add(this.checkedListBox1);
             this.panel2.Controls.Add(this.BattleBox);
             this.panel2.Location = new System.Drawing.Point(12, 196);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(453, 338);
             this.panel2.TabIndex = 20;
@@ -202,7 +202,7 @@
             // 
             this.btnBattle.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBattle.Location = new System.Drawing.Point(222, 34);
-            this.btnBattle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBattle.Margin = new System.Windows.Forms.Padding(2);
             this.btnBattle.Name = "btnBattle";
             this.btnBattle.Size = new System.Drawing.Size(218, 35);
             this.btnBattle.TabIndex = 22;
@@ -215,7 +215,7 @@
             this.checkedListBox1.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(11, 80);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(201, 244);
             this.checkedListBox1.TabIndex = 21;
@@ -226,7 +226,7 @@
             this.BattleBox.FormattingEnabled = true;
             this.BattleBox.ItemHeight = 21;
             this.BattleBox.Location = new System.Drawing.Point(222, 80);
-            this.BattleBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BattleBox.Margin = new System.Windows.Forms.Padding(2);
             this.BattleBox.Name = "BattleBox";
             this.BattleBox.Size = new System.Drawing.Size(222, 235);
             this.BattleBox.TabIndex = 20;
@@ -234,28 +234,28 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel3.Controls.Add(this.groupBox2);
+            this.panel3.Controls.Add(this.groupBox_NewWeapon);
             this.panel3.Controls.Add(this.checkedListBox2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(483, 9);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(230, 524);
             this.panel3.TabIndex = 21;
             // 
-            // groupBox2
+            // groupBox_NewWeapon
             // 
-            this.groupBox2.Controls.Add(this.rdBow);
-            this.groupBox2.Controls.Add(this.rdKnife);
-            this.groupBox2.Controls.Add(this.rdSword);
-            this.groupBox2.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(16, 334);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(161, 107);
-            this.groupBox2.TabIndex = 13;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "New Weapon";
+            this.groupBox_NewWeapon.Controls.Add(this.rdBow);
+            this.groupBox_NewWeapon.Controls.Add(this.rdKnife);
+            this.groupBox_NewWeapon.Controls.Add(this.rdSword);
+            this.groupBox_NewWeapon.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_NewWeapon.Location = new System.Drawing.Point(16, 334);
+            this.groupBox_NewWeapon.Name = "groupBox_NewWeapon";
+            this.groupBox_NewWeapon.Size = new System.Drawing.Size(161, 107);
+            this.groupBox_NewWeapon.TabIndex = 13;
+            this.groupBox_NewWeapon.TabStop = false;
+            this.groupBox_NewWeapon.Text = "New Weapon";
             // 
             // rdBow
             // 
@@ -298,7 +298,7 @@
             this.checkedListBox2.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox2.FormattingEnabled = true;
             this.checkedListBox2.Location = new System.Drawing.Point(16, 44);
-            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox2.Name = "checkedListBox2";
             this.checkedListBox2.Size = new System.Drawing.Size(201, 244);
             this.checkedListBox2.TabIndex = 27;
@@ -307,7 +307,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(16, 479);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 35);
             this.button1.TabIndex = 25;
@@ -334,19 +334,19 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Battle";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox_NewType.ResumeLayout(false);
+            this.groupBox_NewType.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBox_NewWeapon.ResumeLayout(false);
+            this.groupBox_NewWeapon.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -355,7 +355,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox_NewType;
         private System.Windows.Forms.RadioButton rdTroll;
         private System.Windows.Forms.RadioButton rdKnight;
         private System.Windows.Forms.RadioButton rdQueen;
@@ -372,7 +372,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox_NewWeapon;
         private System.Windows.Forms.RadioButton rdBow;
         private System.Windows.Forms.RadioButton rdKnife;
         private System.Windows.Forms.RadioButton rdSword;

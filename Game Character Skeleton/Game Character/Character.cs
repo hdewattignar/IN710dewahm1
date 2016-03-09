@@ -35,6 +35,11 @@ namespace Game_Character
             listbox.Items.Add(weapon.UseWeapon());
         }
 
+        public virtual void setWeapon(IWeapon newWeapon)
+        {
+            weapon = newWeapon;
+        }
+
         abstract public void Declaim();   
 
 
