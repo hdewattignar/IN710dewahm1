@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EncryptionStrategy
 {
-    class ROT13 : IEncryption
+    public class ROT13 : IEncryption
     {
         public string Encrypt(string input)
         {
