@@ -31,13 +31,16 @@ namespace IN710_4._1_Animal_Shelter_Solution_2014
         //=======================================================================
         public List<Critter> CritterQuery(string speciesName)
         {
+            //make a new list to be passed back
             List<Critter> queryList = new List<Critter>();
 
-            ESpecies choosenSpecies = (ESpecies)Enum.Parse(typeof(ESpecies), speciesName);
+            // the enum type  
+            ESpecies chosenSpecies = (ESpecies)Enum.Parse(typeof(ESpecies), speciesName);
 
+            //loop through the critterList adding each critter that matches the chosenSpecies
             for(int i = 0; i < critterList.Count; i++)
             {
-                if(critterList[i].Species == choosenSpecies)
+                if(critterList[i].Species == chosenSpecies)
                 {
                     queryList.Add(critterList[i]);
                 }
@@ -90,9 +93,7 @@ namespace IN710_4._1_Animal_Shelter_Solution_2014
             {
                 displayBox.Items.Add(c.ToString());
             }
-        }
-
-       
+        }      
 
     }
 }

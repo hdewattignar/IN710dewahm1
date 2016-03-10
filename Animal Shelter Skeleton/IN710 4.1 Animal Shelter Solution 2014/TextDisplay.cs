@@ -16,7 +16,7 @@ namespace IN710_4._1_Animal_Shelter_Solution_2014
             this.listBox = listBox;
         }
 
-        /* YOUR CODE HERE */
+        //loop through the critter list and add all items to the list box
         public void displayCritterList(List<Critter> critterList)
         {
             for(int i = 0; i < critterList.Count; i++)

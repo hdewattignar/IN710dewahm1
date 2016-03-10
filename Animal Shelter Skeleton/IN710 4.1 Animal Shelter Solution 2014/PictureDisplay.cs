@@ -16,7 +16,7 @@ namespace IN710_4._1_Animal_Shelter_Solution_2014
             this.pictureBoxList = pictureBoxList;
         }
 
-       /* YOUR CODE HERE */
+       // loop through the critterList adding all items pictures to the picture boxes
         public void displayCritterList(List<Critter> critterList)
         {
             for(int i = 0; i < critterList.Count; i++)
