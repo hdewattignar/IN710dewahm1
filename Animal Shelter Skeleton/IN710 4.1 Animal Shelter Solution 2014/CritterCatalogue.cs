@@ -31,12 +31,19 @@ namespace IN710_4._1_Animal_Shelter_Solution_2014
         //=======================================================================
         public List<Critter> CritterQuery(string speciesName)
         {
-            critterList.Add = ()
-            critterList.Add(speciesName);
+            List<Critter> queryList = new List<Critter>();
 
-            return critterList;
-            ///* YOUR CODE HERE */
-            //throw new NotImplementedException();    // Remove after you write the method
+            ESpecies choosenSpecies = (ESpecies)Enum.Parse(typeof(ESpecies), speciesName);
+
+            for(int i = 0; i < critterList.Count; i++)
+            {
+                if(critterList[i].Species == choosenSpecies)
+                {
+                    queryList.Add(critterList[i]);
+                }
+            }
+
+            return queryList;
         }
 
 
