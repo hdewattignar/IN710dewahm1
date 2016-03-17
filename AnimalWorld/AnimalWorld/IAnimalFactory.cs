@@ -54,6 +54,35 @@ namespace AnimalWorld
                 case 2:
                     newAnimal = new Wombat();
                     break;                
+                case 3:
+                    newAnimal = new Crocodile();
+                    break;
+            }
+
+            return newAnimal;
+        }
+    }
+
+    public class AfricanAnimalFactory : IAnimalFactory
+    {
+        public Animal createAnimal(int animalCode)
+        {
+            Animal newAnimal = null;
+
+            switch (animalCode)
+            {
+                case 0:
+                    newAnimal = new Elephant();
+                    break;
+                case 1:
+                    newAnimal = new Lion();
+                    break;
+                case 2:
+                    newAnimal = new Zebra();
+                    break;
+                case 3:
+                    newAnimal = new Gazelle();
+                    break;
             }
 
             return newAnimal;

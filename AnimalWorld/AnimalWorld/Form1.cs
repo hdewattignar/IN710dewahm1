@@ -28,7 +28,8 @@ namespace AnimalWorld
             pictureBoxes.Add(pictureBox3);
             pictureBoxes.Add(pictureBox4);
 
-            pictureBoxes[0].
+            for (int i = 0; i < pictureBoxes.Count; i ++)
+                pictureBoxes[i].SizeMode = PictureBoxSizeMode.StretchImage;
 
             manager = new Manager(pictureBoxes, lb_Display);           
 
@@ -44,7 +45,14 @@ namespace AnimalWorld
         private void btn_Australia_Click(object sender, EventArgs e)
         {
             lb_Display.Items.Clear();
-            continent = new Australia(rGen, 3);
+            continent = new Australia(rGen, 4);
+            manager.runSimulation(continent);
+        }
+
+        private void btn_Africa_Click(object sender, EventArgs e)
+        {
+            lb_Display.Items.Clear();
+            continent = new Africa(rGen, 4);
             manager.runSimulation(continent);
         }
     }

@@ -35,6 +35,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btn_Africa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -53,7 +54,7 @@
             // 
             this.btn_NorthAmerica.Location = new System.Drawing.Point(153, 395);
             this.btn_NorthAmerica.Name = "btn_NorthAmerica";
-            this.btn_NorthAmerica.Size = new System.Drawing.Size(170, 30);
+            this.btn_NorthAmerica.Size = new System.Drawing.Size(100, 30);
             this.btn_NorthAmerica.TabIndex = 5;
             this.btn_NorthAmerica.Text = "North America";
             this.btn_NorthAmerica.UseVisualStyleBackColor = true;
@@ -61,9 +62,9 @@
             // 
             // btn_Australia
             // 
-            this.btn_Australia.Location = new System.Drawing.Point(386, 395);
+            this.btn_Australia.Location = new System.Drawing.Point(456, 395);
             this.btn_Australia.Name = "btn_Australia";
-            this.btn_Australia.Size = new System.Drawing.Size(170, 30);
+            this.btn_Australia.Size = new System.Drawing.Size(100, 30);
             this.btn_Australia.TabIndex = 6;
             this.btn_Australia.Text = "Australia";
             this.btn_Australia.UseVisualStyleBackColor = true;
@@ -101,11 +102,22 @@
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;
             // 
+            // btn_Africa
+            // 
+            this.btn_Africa.Location = new System.Drawing.Point(308, 395);
+            this.btn_Africa.Name = "btn_Africa";
+            this.btn_Africa.Size = new System.Drawing.Size(100, 30);
+            this.btn_Africa.TabIndex = 11;
+            this.btn_Africa.Text = "Africa";
+            this.btn_Africa.UseVisualStyleBackColor = true;
+            this.btn_Africa.Click += new System.EventHandler(this.btn_Africa_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 442);
+            this.Controls.Add(this.btn_Africa);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -132,6 +144,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btn_Africa;
     }
 }
 
