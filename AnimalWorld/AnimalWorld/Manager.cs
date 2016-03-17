@@ -21,12 +21,15 @@ namespace AnimalWorld
             this.display = display;
             continent = null;
         }
-
+        
         public void runSimulation(Continent newContinent)
         {
+            //set the new continent
             continent = newContinent;
+            // get a list of animals from the continent
             List<Animal> animals = continent.getAnimalList();
             
+            //for each animal set a set the picturebox and list box
             for(int i = 0; i < animals.Count; i++)
             {
                 pictureBoxes[i].Image = animals[i].Image;

@@ -21,6 +21,7 @@ namespace AnimalWorld
             this.nAnimalTypes = nAnimalTypes;            
         }
 
+        //make a list of animals
         public List<Animal> getAnimalList()
         {
             List<Animal> animals = new List<Animal>();

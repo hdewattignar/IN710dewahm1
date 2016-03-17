@@ -22,6 +22,7 @@ namespace AnimalWorld
             InitializeComponent();
             rGen = new Random();
             
+            //setup a list of pictureboxes
             pictureBoxes = new List<PictureBox>();
             pictureBoxes.Add(pictureBox1);
             pictureBoxes.Add(pictureBox2);
@@ -35,6 +36,7 @@ namespace AnimalWorld
 
         }
 
+        //each button creates a new continent and calls the managers run simulation
         private void button1_Click(object sender, EventArgs e)
         {
             lb_Display.Items.Clear();
