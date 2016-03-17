@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace AnimalWorld
 {
-    class Kangaroo
+    class Kangaroo : Animal
     {
+        public Kangaroo()
+        {
+            name = "Kangaroo";
+            family = "Herbivore";
+            food = "Grass";
+            image = new Bitmap("");
+        }
     }
 }
