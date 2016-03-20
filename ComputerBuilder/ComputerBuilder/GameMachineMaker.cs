@@ -9,19 +9,22 @@ namespace ComputerBuilder
     class GameMachineMaker : IMachine_Maker
     {
 
-        public void makeCPU()
+        public Processor makeCPU()
         {
-            throw new NotImplementedException();
+            GameProcessor newProcessor = new GameProcessor();
+            return newProcessor;
         }
 
-        public void makeGraphicsCard()
+        public GraphicsCard makeGraphicsCard()
         {
-            throw new NotImplementedException();
+            GameGraphicsCard newGraphicsCard = new GameGraphicsCard();
+            return newGraphicsCard;
         }
 
-        public void makeMemory()
+        public Memory makeMemory()
         {
-            throw new NotImplementedException();
+            GameMemory newMultiMediaMemory = new GameMemory();
+            return newMultiMediaMemory;
         }
     }
 }

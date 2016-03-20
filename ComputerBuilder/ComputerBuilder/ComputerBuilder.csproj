@@ -46,18 +46,26 @@
   <ItemGroup>
     <Compile Include="BusinessMachineMaker.cs" />
     <Compile Include="BusinessProcessor.cs" />
+    <Compile Include="BussinessGraphicsCard.cs" />
+    <Compile Include="BussinessMemory.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameGraphicsCard.cs" />
     <Compile Include="GameMachineMaker.cs" />
+    <Compile Include="GameMemory.cs" />
     <Compile Include="GameProcessor.cs" />
     <Compile Include="GraphicsCard.cs" />
     <Compile Include="IMachine Maker.cs" />
+    <Compile Include="MachineSpecPrinter.cs" />
     <Compile Include="Memory.cs" />
+    <Compile Include="MultiMediaGraphicsCard.cs" />
     <Compile Include="MultiMediaMachineMaker.cs" />
+    <Compile Include="MultiMediaMemory.cs" />
+    <Compile Include="MultiMediaProcessor.cs" />
     <Compile Include="Processor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

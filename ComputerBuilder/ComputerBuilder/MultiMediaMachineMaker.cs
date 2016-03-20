@@ -8,20 +8,22 @@ namespace ComputerBuilder
 {
     class MultiMediaMachineMaker : IMachine_Maker
     {
-
-        public void makeCPU()
+        public Processor makeCPU()
         {
-            throw new NotImplementedException();
+            MultiMediaProcessor newProcessor = new MultiMediaProcessor();
+            return newProcessor;
         }
 
-        public void makeGraphicsCard()
+        public GraphicsCard makeGraphicsCard()
         {
-            throw new NotImplementedException();
+            MultiMediaGraphicsCard newGraphicsCard = new MultiMediaGraphicsCard();
+            return newGraphicsCard;
         }
 
-        public void makeMemory()
+        public Memory makeMemory()
         {
-            throw new NotImplementedException();
+            MultiMediaMemory newMultiMediaMemory = new MultiMediaMemory();
+            return newMultiMediaMemory;
         }
     }
 }

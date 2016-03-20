@@ -8,20 +8,22 @@ namespace ComputerBuilder
 {
     class BusinessMachineMaker : IMachine_Maker
     {
-
-        public void makeCPU()
+        public Processor makeCPU()
         {
-            throw new NotImplementedException();
+            BusinessProcessor newProcessor = new BusinessProcessor();
+            return newProcessor;
         }
 
-        public void makeGraphicsCard()
+        public GraphicsCard makeGraphicsCard()
         {
-            throw new NotImplementedException();
+            BussinessGraphicsCard newGraphicsCard = new BussinessGraphicsCard();
+            return newGraphicsCard;
         }
 
-        public void makeMemory()
+        public Memory makeMemory()
         {
-            throw new NotImplementedException();
+            BussinessMemory newMultiMediaMemory = new BussinessMemory();
+            return newMultiMediaMemory;
         }
     }
 }

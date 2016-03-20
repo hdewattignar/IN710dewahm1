@@ -8,9 +8,9 @@ namespace ComputerBuilder
 {
     interface IMachine_Maker
     {
-        public abstract void makeCPU();
-        public abstract void makeGraphicsCard();
-        public abstract void makeMemory();
+        public abstract Processor makeCPU();
+        public abstract GraphicsCard makeGraphicsCard();
+        public abstract Memory makeMemory();
 
     }
 }
