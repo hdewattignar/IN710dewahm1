@@ -31,7 +31,7 @@ namespace ComputerBuilder
 
         public override String ToString()
         {
-            return Convert.ToString(price) + "\t\t" + name;
+            return Convert.ToString(price) + "\t" + name;
         }
     }
 }

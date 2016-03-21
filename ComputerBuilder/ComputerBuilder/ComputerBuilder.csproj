@@ -48,6 +48,7 @@
     <Compile Include="BusinessProcessor.cs" />
     <Compile Include="BussinessGraphicsCard.cs" />
     <Compile Include="BussinessMemory.cs" />
+    <Compile Include="BussinessMotherBoard.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,14 +58,22 @@
     <Compile Include="GameGraphicsCard.cs" />
     <Compile Include="GameMachineMaker.cs" />
     <Compile Include="GameMemory.cs" />
+    <Compile Include="GameMotherBoard.cs" />
     <Compile Include="GameProcessor.cs" />
     <Compile Include="GraphicsCard.cs" />
+    <Compile Include="HighEndGamingMachineMaker.cs" />
+    <Compile Include="HighEndGamingMotherBoard.cs" />
+    <Compile Include="HighEndGamingGraphicsCard.cs" />
+    <Compile Include="HighEndGamingMemory.cs" />
+    <Compile Include="HighEndGamingProcessor.cs" />
     <Compile Include="IMachine Maker.cs" />
     <Compile Include="MachineSpecPrinter.cs" />
     <Compile Include="Memory.cs" />
+    <Compile Include="MotherBoard.cs" />
     <Compile Include="MultiMediaGraphicsCard.cs" />
     <Compile Include="MultiMediaMachineMaker.cs" />
     <Compile Include="MultiMediaMemory.cs" />
+    <Compile Include="MultiMediaMotherBoard.cs" />
     <Compile Include="MultiMediaProcessor.cs" />
     <Compile Include="Processor.cs" />
     <Compile Include="Program.cs" />

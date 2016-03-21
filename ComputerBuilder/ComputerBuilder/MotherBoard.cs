@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComputerBuilder
 {
-    class GraphicsCard
+    class MotherBoard
     {
         protected string name;
         protected double price;
@@ -24,7 +24,7 @@ namespace ComputerBuilder
             }
         }
 
-        public GraphicsCard()
+        public MotherBoard()
         {
 
         }
@@ -33,6 +33,5 @@ namespace ComputerBuilder
         {
             return Convert.ToString(price) + "\t" + name;
         }
-
     }
 }

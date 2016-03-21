@@ -6,30 +6,30 @@ using System.Threading.Tasks;
 
 namespace ComputerBuilder
 {
-    class GameMachineMaker : IMachine_Maker
-    {
+    class HighEndGamingMachineMaker : IMachine_Maker
+    {        
 
         public Processor makeCPU()
         {
-            GameProcessor newProcessor = new GameProcessor();
+            HighEndGamingProcessor newProcessor = new HighEndGamingProcessor();
             return newProcessor;
         }
 
         public GraphicsCard makeGraphicsCard()
         {
-            GameGraphicsCard newGraphicsCard = new GameGraphicsCard();
+            HighEndGamingGraphicsCard newGraphicsCard = new HighEndGamingGraphicsCard();
             return newGraphicsCard;
         }
 
         public Memory makeMemory()
         {
-            GameMemory newMultiMediaMemory = new GameMemory();
+            HighEndGamingMemory newMultiMediaMemory = new HighEndGamingMemory();
             return newMultiMediaMemory;
         }
 
         public MotherBoard makeMotherBoard()
         {
-            GameMotherBoard newMotherBoard = new GameMotherBoard();
+            HighEndGamingMotherBoard newMotherBoard = new HighEndGamingMotherBoard();
             return newMotherBoard;
         }
     }

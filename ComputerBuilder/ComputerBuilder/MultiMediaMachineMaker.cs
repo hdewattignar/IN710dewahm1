@@ -25,5 +25,11 @@ namespace ComputerBuilder
             MultiMediaMemory newMultiMediaMemory = new MultiMediaMemory();
             return newMultiMediaMemory;
         }
+
+        public MotherBoard makeMotherBoard()
+        {
+            MultiMediaMotherBoard newMotherBoard = new MultiMediaMotherBoard();
+            return newMotherBoard;
+        }
     }
 }

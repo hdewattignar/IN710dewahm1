@@ -23,8 +23,19 @@ namespace ComputerBuilder
             Processor currCPU = machineMaker.makeCPU();
             Memory currMemory = machineMaker.makeMemory();
             GraphicsCard currGraphics = machineMaker.makeGraphicsCard();
+            MotherBoard currMotherBoard = machineMaker.makeMotherBoard();
 
-            double totalPrice = currCPU.Price + currMemory.Price + currGraphics.Price;
+            double totalPrice = currCPU.Price + currMemory.Price + currGraphics.Price + currMotherBoard.Price;
+
+            displayBox.Items.Clear();
+            displayBox.Items.Add("Price\tComponent");
+            displayBox.Items.Add("-----------------------------------------------------");
+            displayBox.Items.Add(currCPU.ToString());
+            displayBox.Items.Add(currMemory.ToString());
+            displayBox.Items.Add(currGraphics.ToString());
+            displayBox.Items.Add(currMotherBoard.ToString());
+            displayBox.Items.Add("-----------------------------------------------------");
+            displayBox.Items.Add("Total Price " + totalPrice.ToString());
         }
     }
 }

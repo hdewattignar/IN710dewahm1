@@ -25,5 +25,11 @@ namespace ComputerBuilder
             BussinessMemory newMultiMediaMemory = new BussinessMemory();
             return newMultiMediaMemory;
         }
+
+        public MotherBoard makeMotherBoard()
+        {
+            BussinessMotherBoard newMotherBoard = new BussinessMotherBoard();
+            return newMotherBoard;
+        }
     }
 }
