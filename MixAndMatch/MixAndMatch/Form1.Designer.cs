@@ -53,7 +53,7 @@
             // 
             // pb_Body
             // 
-            this.pb_Body.Location = new System.Drawing.Point(13, 334);
+            this.pb_Body.Location = new System.Drawing.Point(13, 346);
             this.pb_Body.Name = "pb_Body";
             this.pb_Body.Size = new System.Drawing.Size(452, 327);
             this.pb_Body.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             // pb_Feet
             // 
-            this.pb_Feet.Location = new System.Drawing.Point(13, 655);
+            this.pb_Feet.Location = new System.Drawing.Point(13, 679);
             this.pb_Feet.Name = "pb_Feet";
             this.pb_Feet.Size = new System.Drawing.Size(452, 327);
             this.pb_Feet.TabIndex = 2;
@@ -126,6 +126,7 @@
             this.btn_MakeMonster.TabIndex = 9;
             this.btn_MakeMonster.Text = "Make Monster";
             this.btn_MakeMonster.UseVisualStyleBackColor = true;
+            this.btn_MakeMonster.Click += new System.EventHandler(this.btn_MakeMonster_Click);
             // 
             // Form1
             // 

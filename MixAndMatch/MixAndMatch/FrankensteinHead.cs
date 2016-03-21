@@ -11,7 +11,7 @@ namespace MixAndMatch
     {
         public FrankensteinHead()
         {
-            image = new Bitmap("frankenstein_0");
+            image = new Bitmap("Frankenstein_0.png");
         }
     }
 }

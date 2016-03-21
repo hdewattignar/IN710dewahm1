@@ -11,7 +11,7 @@ namespace MixAndMatch
     {
          public FrankensteinFeet()
         {
-            image = new Bitmap("frankenstein_2");
+            image = new Bitmap("Frankenstein_2.png");
         }
     }
 }

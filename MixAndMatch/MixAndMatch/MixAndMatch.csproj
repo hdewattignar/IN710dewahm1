@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Body.cs" />
+    <Compile Include="Character.cs" />
     <Compile Include="CharacterMaker.cs" />
     <Compile Include="FairyBody.cs" />
     <Compile Include="FairyFeet.cs" />
@@ -62,7 +63,18 @@
     <Compile Include="Head.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpecBuilder.cs" />
+    <Compile Include="SkeletonBody.cs" />
+    <Compile Include="SkeletonFeet.cs" />
+    <Compile Include="SkeletonHead.cs" />
+    <Compile Include="VampireBody.cs" />
+    <Compile Include="VampireFeet.cs" />
+    <Compile Include="VampireHead.cs" />
+    <Compile Include="WerewolfBody.cs" />
+    <Compile Include="WerewolfFeet.cs" />
+    <Compile Include="WerewolfHead.cs" />
+    <Compile Include="WitchBody.cs" />
+    <Compile Include="WitchFeet.cs" />
+    <Compile Include="WitchHead.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

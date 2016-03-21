@@ -11,7 +11,7 @@ namespace MixAndMatch
     {
         public FairyHead()
         {
-            image = new Bitmap("fairy_0");
+            image = new Bitmap("Fairy_0.png");
         }
     }
 }

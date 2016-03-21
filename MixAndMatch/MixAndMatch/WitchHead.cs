@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace MixAndMatch
 {
-    class FrankensteinBody : Body
+    class WitchHead : Head
     {
-        public FrankensteinBody()
+        public WitchHead()
         {
-            image = new Bitmap("Frankenstein_1.png");
+            image = new Bitmap("Witch_0.png");
         }
     }
 }

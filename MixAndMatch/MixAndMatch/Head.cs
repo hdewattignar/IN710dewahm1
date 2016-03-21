@@ -15,7 +15,7 @@ namespace MixAndMatch
         {
             get
             {
-                return Image;
+                return image;
             }
 
             set

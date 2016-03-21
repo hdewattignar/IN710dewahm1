@@ -11,7 +11,7 @@ namespace MixAndMatch
     {
         public FairyBody()
         {
-            image = new Bitmap("fairy_1");
+            image = new Bitmap("Fairy_1.png");
         }
     }
 }
