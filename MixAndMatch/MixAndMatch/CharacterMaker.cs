@@ -7,11 +7,7 @@ using System.Threading.Tasks;
 namespace MixAndMatch
 {
     enum CharacterTypes { Fairy, Frankenstein, Skeleton, Vampire, Werewolf, Witch}
-
-    public interface IMaker
-    {
-
-    }
+   
     class CharacterMaker
     {
         Head head { get; set; }

@@ -55,15 +55,15 @@
             // 
             this.pb_Body.Location = new System.Drawing.Point(13, 346);
             this.pb_Body.Name = "pb_Body";
-            this.pb_Body.Size = new System.Drawing.Size(452, 327);
+            this.pb_Body.Size = new System.Drawing.Size(452, 266);
             this.pb_Body.TabIndex = 1;
             this.pb_Body.TabStop = false;
             // 
             // pb_Feet
             // 
-            this.pb_Feet.Location = new System.Drawing.Point(13, 679);
+            this.pb_Feet.Location = new System.Drawing.Point(12, 618);
             this.pb_Feet.Name = "pb_Feet";
-            this.pb_Feet.Size = new System.Drawing.Size(452, 327);
+            this.pb_Feet.Size = new System.Drawing.Size(452, 266);
             this.pb_Feet.TabIndex = 2;
             this.pb_Feet.TabStop = false;
             // 
@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 1053);
+            this.ClientSize = new System.Drawing.Size(808, 926);
             this.Controls.Add(this.btn_MakeMonster);
             this.Controls.Add(this.cb_Feet);
             this.Controls.Add(this.cb_Body);
