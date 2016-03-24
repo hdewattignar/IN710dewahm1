@@ -8,5 +8,8 @@ namespace WeatherStation
 {
     interface IWeatherSubject
     {
+        void AddObserver(IWeatherObserver newObserver);
+        void RemoveObserver(IWeatherObserver newObserver);
+        void NotifyObservers();
     }
 }

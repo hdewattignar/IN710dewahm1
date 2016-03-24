@@ -8,5 +8,7 @@ namespace WeatherStation
 {
     interface IWeatherObserver
     {
+        void Update(Object o);
+        void Display();
     }
 }
