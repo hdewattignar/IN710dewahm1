@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeatherStation
 {
-    class CurrentObserver : WeatherObserver
+    public class CurrentObserver : WeatherObserver
     {
         public CurrentObserver(WeatherSubject weatherSubject)
             : base(weatherSubject)

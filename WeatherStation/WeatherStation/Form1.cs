@@ -33,13 +33,12 @@ namespace WeatherStation
         {
             try
             {
-                weatherMeasurements.Measurements.Temperature = Convert.ToInt32(txt_Temperature.Text);
-                weatherMeasurements.Measurements.Humidity = Convert.ToInt32(txt_Humidity.Text);
-                weatherMeasurements.Measurements.Pressure = Convert.ToInt32(txt_Pressure.Text);
+                weatherMeasurements.Measurements.UpdateMeasurements(Convert.ToInt32(txt_Temperature.Text),Convert.ToInt32(txt_Humidity.Text),Convert.ToInt32(txt_Pressure.Text));
+                               
             }
             catch(FormatException)
             {
-
+                MessageBox.Show("Enter numbers only");
             }
 
             weatherMeasurements.NotifyObservers();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeatherStation
 {
-    class AveragesObserver : WeatherObserver
+    public class AveragesObserver : WeatherObserver
     {
         private List<Measurements> measureList;
         public AveragesObserver(WeatherSubject weatherSubject)
@@ -17,7 +17,10 @@ namespace WeatherStation
 
         public override void Update(object o)
         {
-            measureList.Add((Measurements)o);
+            Measurements current = (Measurements) o;
+            Measurements newMeasurement = new Measurements();
+            newMeasurement.UpdateMeasurements(current.Temperature, current.Humidity, current.Pressure);
+            measureList.Add(newMeasurement);
 
             int averageTemperature = 0;
             int averageHumidity = 0;
