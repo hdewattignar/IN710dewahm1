@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeatherStation
 {
-    class Measurements
+    public class Measurements
     {
         int temperature;
 

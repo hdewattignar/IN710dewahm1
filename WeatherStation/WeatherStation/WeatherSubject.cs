@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace WeatherStation
 {
-    public abstract class WeatherReadings : IWeatherSubject
-    {        
+    public abstract class WeatherSubject : IWeatherSubject
+    {
         protected Measurements measurements;
+
+        public Measurements Measurements
+        {
+            get { return measurements; }
+            set { measurements = value; }
+        }
         protected List<IWeatherObserver> observerlist;
 
-        public WeatherReadings()
+        public WeatherSubject()
         {
             measurements = new Measurements();
             observerlist = new List<IWeatherObserver>();

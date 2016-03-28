@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace WeatherStation
 {
-    public interface IWeatherObserver
+    public class WeatherMeasurements : WeatherSubject
     {
-        void Update(Object o);
-        String Display();
+        public WeatherMeasurements()
+            :base()
+        {
+
+        }
     }
 }

@@ -12,14 +12,46 @@ namespace WeatherStation
 {
     public partial class Form1 : Form
     {
+
+        WeatherMeasurements weatherMeasurements;
+        CurrentObserver currentObserver;
+        AveragesObserver averageObserver;
+        ForecastObserver forcastObserver;
+
         public Form1()
         {
             InitializeComponent();
+
+            weatherMeasurements = new WeatherMeasurements();
+
+            currentObserver = new CurrentObserver(weatherMeasurements);
+            averageObserver = new AveragesObserver(weatherMeasurements);
+            forcastObserver = new ForecastObserver(weatherMeasurements);
         }
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
+            weatherMeasurements.Measurements.Temperature = Convert.ToInt32(txt_Temperature.Text);
+            weatherMeasurements.Measurements.Humidity = Convert.ToInt32(txt_Humidity.Text);
+            weatherMeasurements.Measurements.Pressure = Convert.ToInt32(txt_Pressure.Text);
 
+            weatherMeasurements.NotifyObservers();
+
+            string[] splitCurrent = currentObserver.Display().Split(',');
+
+            foreach(string value in splitCurrent)
+            {
+                list_currentReadings.Items.Add(value);
+            }
+
+            string[] splitAverage = averageObserver.Display().Split(',');
+
+            foreach (string value in splitAverage)
+            {
+                list_Average.Items.Add(value);
+            }
+            
+            list_Forecast.Items.Add(forcastObserver.Display());
         }
     }
 }
