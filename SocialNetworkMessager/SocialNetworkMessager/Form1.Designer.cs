@@ -127,6 +127,7 @@
             this.btn_UpdateStatus.TabIndex = 0;
             this.btn_UpdateStatus.Text = "Update Status";
             this.btn_UpdateStatus.UseVisualStyleBackColor = true;
+            this.btn_UpdateStatus.Click += new System.EventHandler(this.btn_UpdateStatus_Click);
             // 
             // txt_Status
             // 
@@ -134,7 +135,6 @@
             this.txt_Status.Name = "txt_Status";
             this.txt_Status.Size = new System.Drawing.Size(478, 20);
             this.txt_Status.TabIndex = 1;
-            this.txt_Status.Text = "Enter new status";
             // 
             // list_Main
             // 
