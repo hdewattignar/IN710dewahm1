@@ -31,9 +31,16 @@ namespace WeatherStation
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            weatherMeasurements.Measurements.Temperature = Convert.ToInt32(txt_Temperature.Text);
-            weatherMeasurements.Measurements.Humidity = Convert.ToInt32(txt_Humidity.Text);
-            weatherMeasurements.Measurements.Pressure = Convert.ToInt32(txt_Pressure.Text);
+            try
+            {
+                weatherMeasurements.Measurements.Temperature = Convert.ToInt32(txt_Temperature.Text);
+                weatherMeasurements.Measurements.Humidity = Convert.ToInt32(txt_Humidity.Text);
+                weatherMeasurements.Measurements.Pressure = Convert.ToInt32(txt_Pressure.Text);
+            }
+            catch(FormatException)
+            {
+
+            }
 
             weatherMeasurements.NotifyObservers();
 
