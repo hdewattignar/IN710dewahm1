@@ -83,6 +83,7 @@
             this.btn_ComputeScore.TabIndex = 1;
             this.btn_ComputeScore.Text = "Compute Score";
             this.btn_ComputeScore.UseVisualStyleBackColor = true;
+            this.btn_ComputeScore.Click += new System.EventHandler(this.btn_ComputeScore_Click);
             // 
             // lbl_Score
             // 
@@ -120,6 +121,7 @@
             this.tb_CorrectAnswers.Name = "tb_CorrectAnswers";
             this.tb_CorrectAnswers.Size = new System.Drawing.Size(135, 20);
             this.tb_CorrectAnswers.TabIndex = 5;
+            this.tb_CorrectAnswers.Text = "10";
             // 
             // tb_IncorrectAnswers
             // 
@@ -127,6 +129,7 @@
             this.tb_IncorrectAnswers.Name = "tb_IncorrectAnswers";
             this.tb_IncorrectAnswers.Size = new System.Drawing.Size(135, 20);
             this.tb_IncorrectAnswers.TabIndex = 6;
+            this.tb_IncorrectAnswers.Text = "3";
             // 
             // Form1
             // 
