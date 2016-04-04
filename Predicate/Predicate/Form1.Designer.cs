@@ -43,6 +43,7 @@
             this.btn_GenerateRandoms.TabIndex = 0;
             this.btn_GenerateRandoms.Text = "Generate Randoms";
             this.btn_GenerateRandoms.UseVisualStyleBackColor = true;
+            this.btn_GenerateRandoms.Click += new System.EventHandler(this.btn_GenerateRandoms_Click);
             // 
             // btn_EvenNumbers
             // 
@@ -52,6 +53,7 @@
             this.btn_EvenNumbers.TabIndex = 1;
             this.btn_EvenNumbers.Text = "Select Even Numbers";
             this.btn_EvenNumbers.UseVisualStyleBackColor = true;
+            this.btn_EvenNumbers.Click += new System.EventHandler(this.btn_EvenNumbers_Click);
             // 
             // btn_LessThanTen
             // 
@@ -61,6 +63,7 @@
             this.btn_LessThanTen.TabIndex = 2;
             this.btn_LessThanTen.Text = "Select Numbers < 10";
             this.btn_LessThanTen.UseVisualStyleBackColor = true;
+            this.btn_LessThanTen.Click += new System.EventHandler(this.btn_LessThanTen_Click);
             // 
             // listBox_RandomsDisplay
             // 
