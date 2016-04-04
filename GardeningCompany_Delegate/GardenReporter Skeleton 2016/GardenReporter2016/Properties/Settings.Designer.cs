@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GardeningCompany_Delegate.Properties
+namespace GardenReporter2016.Properties
 {
 
 
