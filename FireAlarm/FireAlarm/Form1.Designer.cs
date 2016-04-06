@@ -30,9 +30,9 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rb_inferno = new System.Windows.Forms.RadioButton();
+            this.rb_serious = new System.Windows.Forms.RadioButton();
+            this.rb_minor = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,9 +48,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rb_inferno);
+            this.groupBox1.Controls.Add(this.rb_serious);
+            this.groupBox1.Controls.Add(this.rb_minor);
             this.groupBox1.Location = new System.Drawing.Point(13, 85);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(177, 214);
@@ -58,38 +58,37 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fire Category";
             // 
-            // radioButton1
+            // rb_inferno
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 41);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(51, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Minor";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rb_inferno.AutoSize = true;
+            this.rb_inferno.Location = new System.Drawing.Point(7, 160);
+            this.rb_inferno.Name = "rb_inferno";
+            this.rb_inferno.Size = new System.Drawing.Size(58, 17);
+            this.rb_inferno.TabIndex = 2;
+            this.rb_inferno.Text = "Inferno";
+            this.rb_inferno.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rb_serious
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(7, 97);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(60, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Serious";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rb_serious.AutoSize = true;
+            this.rb_serious.Location = new System.Drawing.Point(7, 97);
+            this.rb_serious.Name = "rb_serious";
+            this.rb_serious.Size = new System.Drawing.Size(60, 17);
+            this.rb_serious.TabIndex = 1;
+            this.rb_serious.Text = "Serious";
+            this.rb_serious.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rb_minor
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(7, 160);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(58, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Inferno";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rb_minor.AutoSize = true;
+            this.rb_minor.Checked = true;
+            this.rb_minor.Location = new System.Drawing.Point(7, 41);
+            this.rb_minor.Name = "rb_minor";
+            this.rb_minor.Size = new System.Drawing.Size(51, 17);
+            this.rb_minor.TabIndex = 0;
+            this.rb_minor.TabStop = true;
+            this.rb_minor.Text = "Minor";
+            this.rb_minor.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -110,9 +109,9 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rb_inferno;
+        private System.Windows.Forms.RadioButton rb_serious;
+        private System.Windows.Forms.RadioButton rb_minor;
     }
 }
 

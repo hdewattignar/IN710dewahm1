@@ -11,7 +11,7 @@ namespace FireAlarm
         public delegate void FireEventHandler(object fireSubject, FireAlarmEventArgs fireEventArgs);
         public event FireEventHandler FireEvent;
         
-        public FireAlarmSubject(EFireCategory fireCategory)
+        public void OnFireEvent(EFireCategory fireCategory)
         {
             FireAlarmEventArgs fe = new FireAlarmEventArgs(fireCategory);
 
