@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace FireAlarm
 {
-    class FireAlarmEventArgs
+    public enum EFireCategory { MINOR, SERIOUS, INFERNO };
+    public class FireAlarmEventArgs: EventArgs
     {
+        public EFireCategory FireCategory{get;set;}
+
+        public FireAlarmEventArgs(EFireCategory currentFireCategory)
+        {
+            FireCategory = currentFireCategory;
+        }
     }
 }

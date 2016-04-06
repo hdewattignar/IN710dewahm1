@@ -12,9 +12,18 @@ namespace FireAlarm
 {
     public partial class Form1 : Form
     {
+        private FireAlarmSubject subject;
+        private FireAlarmObserver instructionObserver;
+        //add beep observer
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
