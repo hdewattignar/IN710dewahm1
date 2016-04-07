@@ -16,7 +16,7 @@ namespace PetrolBot
         EShipState shipState;
         Point shipVelocity;
         Graphics shipCanvas;
-        Random rgen;
+        Random rGen;
 
         public delegate void OutOfFuelEventHandler(object ship, ShipEventArgs shipArgs);
         public event OutOfFuelEventHandler OutOfFuelEvent;
@@ -36,16 +36,16 @@ namespace PetrolBot
             set { petrol = value; }
         }
 
-        public Ship(Graphics shipCanvas, int shipSize)
+        public Ship(Graphics shipCanvas, int shipSize, Random rGen)
         {
             this.shipCanvas = shipCanvas;
-            rgen = new Random();
-            petrol = 100;
-            shipColour = Color.Red;
-            shipLocation = new Point(rgen.Next(600), rgen.Next(600));
+            this.rGen = rGen;
+            petrol = rGen.Next(100);
+            shipColour = Color.Red;            
+            shipLocation = new Point(rGen.Next(400), rGen.Next(400));
             this.shipSize = shipSize;
             shipState = EShipState.wandering;
-            shipVelocity = new Point(5, 5);
+            shipVelocity = new Point(rGen.Next(-5, 5));
 
         }
 
@@ -63,19 +63,19 @@ namespace PetrolBot
         {
             if(shipLocation.X < 0)
             {
-                shipVelocity.X = 5;
+                shipVelocity.X = rGen.Next(5);
             }
             if (shipLocation.Y < 0)
             {
-                shipVelocity.Y = 5;
+                shipVelocity.Y = rGen.Next(5);
             }
-            if (shipLocation.X > 550)
+            if (shipLocation.X > (582 - shipSize))
             {
-                shipVelocity.X = -5;
+                shipVelocity.X = -rGen.Next(5);
             }
-            if (shipLocation.Y > 550)
+            if (shipLocation.Y > (483 - shipSize))
             {
-                shipVelocity.Y = -5;
+                shipVelocity.Y = -rGen.Next(5);
             }
 
             shipLocation.X += shipVelocity.X;
@@ -97,12 +97,7 @@ namespace PetrolBot
 
             if (OutOfFuelEvent != null)
                 OutOfFuelEvent(this, shipArgs);
-        }
-
-        public void refuel()
-        {
-            petrol += 5;
-        }
+        }        
 
         public void ShipCycle()
         {
