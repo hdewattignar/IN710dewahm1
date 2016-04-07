@@ -18,6 +18,12 @@ namespace PetrolBot
         Graphics shipCanvas;
         Random rgen;
 
+        public delegate void OutOfFuelEventHandler(object ship, ShipEventArgs shipArgs);
+        public event OutOfFuelEventHandler OutOfFuelEvent;
+
+        public delegate void FullOfFuelEventHandler(object ship, ShipEventArgs shipArgs);
+        public event FullOfFuelEventHandler FullOfFuelEvent; 
+
         public Point ShipLocation
         {
             get { return shipLocation; }
@@ -63,11 +69,11 @@ namespace PetrolBot
             {
                 shipVelocity.Y = 5;
             }
-            if (shipLocation.X > 600)
+            if (shipLocation.X > 550)
             {
                 shipVelocity.X = -5;
             }
-            if (shipLocation.Y > 600)
+            if (shipLocation.Y > 550)
             {
                 shipVelocity.Y = -5;
             }
@@ -79,12 +85,18 @@ namespace PetrolBot
 
         public void OnFullOfFuelEvent()
         {
-            
+            ShipEventArgs shipArgs = new ShipEventArgs(shipState);
+
+            if (FullOfFuelEvent != null)
+                FullOfFuelEvent(this, shipArgs);
         }
 
         public void OnOutOfFuelEvent()
         {
-            
+            ShipEventArgs shipArgs = new ShipEventArgs(shipState);
+
+            if (OutOfFuelEvent != null)
+                OutOfFuelEvent(this, shipArgs);
         }
 
         public void refuel()
@@ -94,14 +106,24 @@ namespace PetrolBot
 
         public void ShipCycle()
         {
-            if(petrol > 0)
+            if (petrol == 100)
+            {
+                shipState = EShipState.wandering;
+                OnFullOfFuelEvent();
+            }
+                
+            if (petrol == 0)
+                shipState = EShipState.refueling;
+
+            if(shipState == EShipState.wandering)
             {
                 drawShip();
                 moveShip();
             }
             else
-            {
-                drawShip();                
+            {                
+                drawShip();
+                OnOutOfFuelEvent();
             }
                 
         }

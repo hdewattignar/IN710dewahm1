@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace PetrolBot
 {
-    class ShipEventArgs
+    public enum EShipState { wandering, refueling };
+    public class ShipEventArgs : EventArgs
     {
+        public EShipState shipState { get; set; }
+
+        public ShipEventArgs(EShipState currentShipState)
+        {
+            shipState = currentShipState;
+        }
     }
 }
