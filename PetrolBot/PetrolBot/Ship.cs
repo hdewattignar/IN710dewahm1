@@ -16,7 +16,7 @@ namespace PetrolBot
         EShipState shipState;
         Point shipVelocity;
         Graphics shipCanvas;
-        Random rgen;
+        Random rGen;
 
         public delegate void OutOfFuelEventHandler(object ship, ShipEventArgs shipArgs);
         public event OutOfFuelEventHandler OutOfFuelEvent;
@@ -36,8 +36,9 @@ namespace PetrolBot
             set { petrol = value; }
         }
 
-        public Ship(Graphics shipCanvas, int shipSize)
+        public Ship(Graphics shipCanvas, int shipSize, Random rGen)
         {
+<<<<<<< HEAD
             this.shipCanvas = shipCanvas;            
             rgen = new Random();
             petrol = 100;
@@ -46,6 +47,17 @@ namespace PetrolBot
             this.shipSize = shipSize;
             shipState = EShipState.wandering;
             shipVelocity = new Point(5, 5);
+=======
+            this.shipCanvas = shipCanvas;
+            this.rGen = rGen;
+            petrol = rGen.Next(100);
+            shipColour = Color.Red;            
+            shipLocation = new Point(rGen.Next(400), rGen.Next(400));
+            this.shipSize = shipSize;
+            shipState = EShipState.wandering;
+            shipVelocity = new Point(rGen.Next(-5, 5));
+
+>>>>>>> origin/master
         }
 
         public void drawShip()
@@ -62,19 +74,35 @@ namespace PetrolBot
         {
             if(shipLocation.X < 0)
             {
+<<<<<<< HEAD
                 shipVelocity.X = rgen.Next(5);
             }
             if (shipLocation.Y < 0)
             {
                 shipVelocity.Y = rgen.Next(5);
+=======
+                shipVelocity.X = rGen.Next(5);
             }
-            if (shipLocation.X > 550)
+            if (shipLocation.Y < 0)
             {
+                shipVelocity.Y = rGen.Next(5);
+>>>>>>> origin/master
+            }
+            if (shipLocation.X > (582 - shipSize))
+            {
+<<<<<<< HEAD
                 shipVelocity.X = -rgen.Next(5);
+=======
+                shipVelocity.X = -rGen.Next(5);
+>>>>>>> origin/master
             }
-            if (shipLocation.Y > 550)
+            if (shipLocation.Y > (483 - shipSize))
             {
+<<<<<<< HEAD
                 shipVelocity.Y = -rgen.Next(5);
+=======
+                shipVelocity.Y = -rGen.Next(5);
+>>>>>>> origin/master
             }
 
             shipLocation.X += shipVelocity.X;
@@ -96,12 +124,7 @@ namespace PetrolBot
 
             if (OutOfFuelEvent != null)
                 OutOfFuelEvent(this, shipArgs);
-        }
-
-        public void refuel()
-        {
-            petrol += 5;
-        }
+        }        
 
         public void ShipCycle()
         {

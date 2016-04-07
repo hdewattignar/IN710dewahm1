@@ -9,30 +9,26 @@ namespace PetrolBot
 {
     public class PetrolBot
     {
-        Graphics botCanvas;
-        Bitmap offScreenBitmap;
-        Graphics offScreenGraphics;
+        private Graphics botCanvas;
 
-        Color botColour;
-        Point botCurrentLocation;
-        Ship botShip;
-        Point botStartingLocation;
-        Point shipLocation;
+        private Color botColour;
+        private Point botCurrentLocation;
+        private Ship botShip;
+        private Point botStartingLocation;
+        private Point shipLocation;
 
-        public PetrolBot(Graphics botCanvas, Ship botShip, Point botStartingLocation)
+        public PetrolBot(Graphics botCanvas, Ship botShip, Point botStartingLocation, Random rGen)
         {            
             this.botCanvas = botCanvas;
-
-
             this.botShip = botShip;
             this.botStartingLocation = botStartingLocation;
-            botColour = Color.Red;
+            botColour = Color.FromArgb(rGen.Next(255), rGen.Next(255), rGen.Next(255));
             botCurrentLocation = botStartingLocation;
 
             Ship.OutOfFuelEventHandler outOfFuelHandler = new Ship.OutOfFuelEventHandler(OutOfFuelEventHandler);
             botShip.OutOfFuelEvent += outOfFuelHandler;
 
-            Ship.FullOfFuelEventHandler fullOfFuelHandler = new Ship.FullOfFuelEventHandler(OutOfFuelEventHandler);
+            Ship.FullOfFuelEventHandler fullOfFuelHandler = new Ship.FullOfFuelEventHandler(FullOfFuelEventHandler);
             botShip.FullOfFuelEvent += fullOfFuelHandler;
         }
 

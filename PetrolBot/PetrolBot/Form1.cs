@@ -16,10 +16,14 @@ namespace PetrolBot
         int numShips;
         List<PetrolBot> botList;
         List<Ship> shipList;
+        Random rGen;
 
         Graphics mainCanvas;
         Bitmap offScreenBitmap;
         Graphics offScreenGraphics;
+
+        SolidBrush mainBrush;
+        SolidBrush blackBrush;
 
 
         public Form1()
@@ -33,31 +37,35 @@ namespace PetrolBot
             timer1.Enabled = true;
             shipList = new List<Ship>();
             botList = new List<PetrolBot>();
-            numShips = 4;            
+            numShips = 4;
+            rGen = new Random();
+
+            mainBrush = new SolidBrush(Color.LightBlue);
+            blackBrush = new SolidBrush(Color.Black);
+            
 
             for (int i = 0; i < numShips; i++ )
             {
-                shipList.Add(new Ship(offScreenGraphics, SHIP_SIZE));
-                botList.Add(new PetrolBot(offScreenGraphics,shipList[i], new Point(50 * (i + 1), 500)));
+                Ship ship = new Ship(offScreenGraphics, SHIP_SIZE, rGen);
+                PetrolBot bot = new PetrolBot(offScreenGraphics, ship, new Point(50 * (i + 1), 500), rGen);
+                shipList.Add(ship);
+                botList.Add(bot);                
             }            
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            SolidBrush mainBrush = new SolidBrush(Color.Black);
-
-            mainCanvas.FillRectangle(mainBrush, 200, 200, 200, 200);
-        }
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            mainCanvas.DrawImage(offScreenBitmap,0,0);
+            offScreenGraphics.FillRectangle(mainBrush, 0, 0, 600, 600);
+            offScreenGraphics.FillRectangle(blackBrush, 0, 485, 585, 75);
 
             for(int i = 0; i < shipList.Count; i++)
             {
                 shipList[i].ShipCycle();
                 botList[i].drawBot();
             }
+            
+            mainCanvas.DrawImage(offScreenBitmap, 0, 0);
         }
     }
 }
