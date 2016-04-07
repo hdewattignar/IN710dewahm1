@@ -38,7 +38,7 @@ namespace PetrolBot
 
         public Ship(Graphics shipCanvas, int shipSize)
         {
-            this.shipCanvas = shipCanvas;
+            this.shipCanvas = shipCanvas;            
             rgen = new Random();
             petrol = 100;
             shipColour = Color.Red;
@@ -46,7 +46,6 @@ namespace PetrolBot
             this.shipSize = shipSize;
             shipState = EShipState.wandering;
             shipVelocity = new Point(5, 5);
-
         }
 
         public void drawShip()
@@ -63,19 +62,19 @@ namespace PetrolBot
         {
             if(shipLocation.X < 0)
             {
-                shipVelocity.X = 5;
+                shipVelocity.X = rgen.Next(5);
             }
             if (shipLocation.Y < 0)
             {
-                shipVelocity.Y = 5;
+                shipVelocity.Y = rgen.Next(5);
             }
             if (shipLocation.X > 550)
             {
-                shipVelocity.X = -5;
+                shipVelocity.X = -rgen.Next(5);
             }
             if (shipLocation.Y > 550)
             {
-                shipVelocity.Y = -5;
+                shipVelocity.Y = -rgen.Next(5);
             }
 
             shipLocation.X += shipVelocity.X;
