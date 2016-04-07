@@ -17,12 +17,12 @@ namespace PetrolBot
         private Point botStartingLocation;
         private Point shipLocation;
 
-        public PetrolBot(Graphics botCanvas, Ship botShip, Point botStartingLocation)
+        public PetrolBot(Graphics botCanvas, Ship botShip, Point botStartingLocation, Random rGen)
         {            
             this.botCanvas = botCanvas;
             this.botShip = botShip;
             this.botStartingLocation = botStartingLocation;
-            botColour = Color.Red;
+            botColour = Color.FromArgb(rGen.Next(255), rGen.Next(255), rGen.Next(255));
             botCurrentLocation = botStartingLocation;
 
             Ship.OutOfFuelEventHandler outOfFuelHandler = new Ship.OutOfFuelEventHandler(OutOfFuelEventHandler);

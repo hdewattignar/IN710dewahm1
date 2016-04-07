@@ -47,7 +47,7 @@ namespace PetrolBot
             for (int i = 0; i < numShips; i++ )
             {
                 Ship ship = new Ship(offScreenGraphics, SHIP_SIZE, rGen);
-                PetrolBot bot = new PetrolBot(offScreenGraphics, ship, new Point(50 * (i + 1), 500));
+                PetrolBot bot = new PetrolBot(offScreenGraphics, ship, new Point(50 * (i + 1), 500), rGen);
                 shipList.Add(ship);
                 botList.Add(bot);                
             }            
@@ -64,7 +64,6 @@ namespace PetrolBot
                 shipList[i].ShipCycle();
                 botList[i].drawBot();
             }
-
             
             mainCanvas.DrawImage(offScreenBitmap, 0, 0);
         }
