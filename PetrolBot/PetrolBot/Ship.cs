@@ -126,6 +126,17 @@ namespace PetrolBot
                 
         }
 
+        public void Refuel()
+        {
+            if(petrol < 100)
+                Petrol += 5;
+        }
+
+        public Point getShipLocation()
+        {
+            return shipLocation;
+        }
+
         public void usePetrol()
         {
             petrol -= 1;

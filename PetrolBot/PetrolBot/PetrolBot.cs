@@ -46,12 +46,11 @@ namespace PetrolBot
 
         public void OutOfFuelEventHandler(object ship, ShipEventArgs shipArgs)
         {
-            botCurrentLocation = botShip.ShipLocation;
+            shipLocation = botShip.getShipLocation();
 
-            if(botShip.Petrol < 100)
-            {
-                botShip.Petrol += 5;
-            }
+            botCurrentLocation = shipLocation;
+
+            botShip.Refuel();
             
         }
     }

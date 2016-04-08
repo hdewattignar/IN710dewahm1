@@ -29,7 +29,7 @@ namespace PetrolBot
         public Form1()
         {
             InitializeComponent();
-
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             mainCanvas = this.CreateGraphics();
             offScreenBitmap = new Bitmap(this.Width, this.Height);
             offScreenGraphics = Graphics.FromImage(offScreenBitmap);
@@ -37,7 +37,7 @@ namespace PetrolBot
             timer1.Enabled = true;
             shipList = new List<Ship>();
             botList = new List<PetrolBot>();
-            numShips = 4;
+            numShips = 50;
             rGen = new Random();
 
             mainBrush = new SolidBrush(Color.LightBlue);
