@@ -37,7 +37,7 @@ namespace PetrolBot
             timer1.Enabled = true;
             shipList = new List<Ship>();
             botList = new List<PetrolBot>();
-            numShips = 50;
+            numShips = 6;
             rGen = new Random();
 
             mainBrush = new SolidBrush(Color.LightBlue);
