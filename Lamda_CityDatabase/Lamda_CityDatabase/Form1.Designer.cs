@@ -38,7 +38,7 @@
             this.listBox_Display.FormattingEnabled = true;
             this.listBox_Display.Location = new System.Drawing.Point(176, 12);
             this.listBox_Display.Name = "listBox_Display";
-            this.listBox_Display.Size = new System.Drawing.Size(207, 407);
+            this.listBox_Display.Size = new System.Drawing.Size(402, 407);
             this.listBox_Display.TabIndex = 0;
             // 
             // txt_UserInput
@@ -62,7 +62,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 434);
+            this.ClientSize = new System.Drawing.Size(590, 434);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.txt_UserInput);
             this.Controls.Add(this.listBox_Display);
