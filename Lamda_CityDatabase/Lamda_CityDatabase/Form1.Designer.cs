@@ -31,6 +31,7 @@
             this.listBox_Display = new System.Windows.Forms.ListBox();
             this.txt_UserInput = new System.Windows.Forms.TextBox();
             this.btn_Search = new System.Windows.Forms.Button();
+            this.btn_SearchForPart2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox_Display
@@ -58,11 +59,22 @@
             this.btn_Search.UseVisualStyleBackColor = true;
             this.btn_Search.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btn_SearchForPart2
+            // 
+            this.btn_SearchForPart2.Location = new System.Drawing.Point(13, 97);
+            this.btn_SearchForPart2.Name = "btn_SearchForPart2";
+            this.btn_SearchForPart2.Size = new System.Drawing.Size(157, 23);
+            this.btn_SearchForPart2.TabIndex = 3;
+            this.btn_SearchForPart2.Text = "Search for part 2";
+            this.btn_SearchForPart2.UseVisualStyleBackColor = true;
+            this.btn_SearchForPart2.Click += new System.EventHandler(this.btn_SearchForPart2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 434);
+            this.Controls.Add(this.btn_SearchForPart2);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.txt_UserInput);
             this.Controls.Add(this.listBox_Display);
@@ -78,6 +90,7 @@
         private System.Windows.Forms.ListBox listBox_Display;
         private System.Windows.Forms.TextBox txt_UserInput;
         private System.Windows.Forms.Button btn_Search;
+        private System.Windows.Forms.Button btn_SearchForPart2;
     }
 }
 

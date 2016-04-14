@@ -40,6 +40,12 @@ namespace Lamda_CityDatabase
             cityDatabase.Add(city6);
         }
 
+        public void ForEachWithLamda()
+        {
+            cityDatabase.ForEach((c) => c.Population *= 3);
+            cityDatabase.ForEach( c => listBox_Display.Items.Add(c.ToString()));
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string userInput = txt_UserInput.Text;
@@ -55,6 +61,11 @@ namespace Lamda_CityDatabase
                     listBox_Display.Items.Add(c.ToString());
                 }
             }
+        }
+
+        private void btn_SearchForPart2_Click(object sender, EventArgs e)
+        {
+            ForEachWithLamda();
         }
     }
 }
