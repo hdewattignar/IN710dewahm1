@@ -32,6 +32,11 @@ namespace PetrolBot
             botShip.FullOfFuelEvent += fullOfFuelHandler;
         }
 
+        public void moveBot()
+        {
+
+        }
+
         public void drawBot()
         {
             SolidBrush botBrush = new SolidBrush(botColour);
