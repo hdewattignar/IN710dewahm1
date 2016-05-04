@@ -54,17 +54,23 @@ namespace Art_Database_1
             paintings.Add(new Painting { Artist = "Mondrian", Title = "Composition with Red, Yellow and Blue", Method = "Oil on canvas", Year = 1821, Width = 40, Height = 35 });
             paintings.Add(new Painting { Artist = "Pollock", Title = "The Key", Method = "Oil on canvas", Year = 1946, Width = 84, Height = 213 });
             paintings.Add(new Painting { Artist = "Picasso", Title = "The Three Musicians", Method = "Oil on canvas", Year = 1921, Width = 200, Height = 222 });
-
-
-
+            
         }
 
         //------------------------------------------------------
         // btnAllPaintings
         //------------------------------------------------------
         private void button1_Click(object sender, EventArgs e)
-        {
-           
+        {                  
+
+            foreach (Painting a in paintings)
+            {
+                //build string 
+                string painting = a.Artist + "\t\t" + a.Year + "\t\t" + a.Method + "\t\t" + a.Title;
+                //add to list box
+                listBox1.Items.Add(painting);
+            }
+                
         }
 
 
@@ -73,7 +79,18 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button2_Click(object sender, EventArgs e)
         {
+            IEnumerable<Artist> italianArtists;
 
+            italianArtists = artists
+                                .Where(a => a.Country.Equals("Italy"));
+
+            foreach(Artist a in italianArtists)
+            {
+                //build string 
+                string artist = a.FirstName + " " + a.LastName + "\t\t" + a.YearOfBirth + "-" + a.YearOfDeath + "\t\t" + a.Country;
+                //add to list box
+                listBox1.Items.Add(artist);
+            }
         }
 
         //------------------------------------------------------
@@ -81,7 +98,19 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void btnBefore1800_Click(object sender, EventArgs e)
         {
-            
+            IEnumerable<Painting> paintingBefore1800;
+
+            paintingBefore1800 = paintings
+                    .Where(p => p.Year < 1800)  //paintings before 1800
+                    .OrderBy(p => p.Year);      //sort by the year
+
+            foreach (Painting p in paintingBefore1800)
+            {
+                //build string 
+                string painting = p.Artist + "\t\t" + p.Year + "\t\t" + p.Method + "\t\t" + p.Title;
+                //add to list box
+                listBox1.Items.Add(painting);
+            }
         }
 
         //------------------------------------------------------
@@ -89,7 +118,19 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void btnOldest_Click(object sender, EventArgs e)
         {
-            
+            IEnumerable<Painting> oldestPainting;
+
+            oldestPainting = from p1 in paintings                    
+                             where p1.Year == paintings.Min(p2 => p2.Year)  
+                             select p1;               
+
+            foreach (Painting p in oldestPainting)
+            {
+                //build string 
+                string painting = p.Artist + "\t\t" + p.Year + "\t\t" + p.Method + "\t\t" + p.Title;
+                //add to list box
+                listBox1.Items.Add(painting);
+            }
         }
 
         //------------------------------------------------------
@@ -97,7 +138,21 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button6_Click(object sender, EventArgs e)
         {
-           
+            string userInput = textBox1.Text;
+
+            IEnumerable<Painting> byArtist;
+
+            byArtist = from p in paintings
+                        where p.Artist == userInput
+                        select p;
+
+            foreach (Painting p in byArtist)
+            {
+                //build string 
+                string painting = p.Artist + "\t\t" + p.Year + "\t\t" + p.Method + "\t\t" + p.Title;
+                //add to list box
+                listBox1.Items.Add(painting);
+            }
         }
 
         //------------------------------------------------------
