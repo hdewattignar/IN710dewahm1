@@ -47,12 +47,39 @@ namespace LINQ_To_External
 
         private void btn_Pictures_Click(object sender, EventArgs e)
         {
+            DataClasses1DataContext db = new DataClasses1DataContext();
 
+            var pictures = from p in db.tblPictures
+                                join s in db.tblStrikes on p.strikeID equals s.strikeID
+                                select new
+                                {
+                                    s.strikeLatitude, s.strikeLongitude, p.pictureFileName
+                                };
+
+            foreach (var p in pictures)
+            {
+                string show = "Latitude: " + p.strikeLatitude + ", Longitude: " + p.strikeLongitude + ", File name: " + p.pictureFileName;
+
+                listBox_Display.Items.Add(show);
+            }
         }
 
         private void btn_FiresByLightning_Click(object sender, EventArgs e)
         {
+            DataClasses1DataContext db = new DataClasses1DataContext();
 
+            var StrikeFires = from s in db.tblStrikes
+                              join f in db.tblFires on s.strikeDate equals f.fireDate
+                              where s.strikeLatitude == f.fireLatitude
+                              && s.strikeLongitude == f.fireLongitude
+                              select f;
+
+            foreach (var a in StrikeFires)
+            {
+                string show = "Date: " + a.fireDate + "Area: " + a.fireArea + ", Latitude: " + a.fireLatitude + ", Longitude: " + a.fireLongitude;
+
+                listBox_Display.Items.Add(show);
+            }
         }
     }
 }
