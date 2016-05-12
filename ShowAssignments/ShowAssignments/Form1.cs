@@ -8,22 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AssignmentsDataBaseADO
+namespace ShowAssignments
 {
     public partial class Form1 : Form
     {
-        Manager manager;
-
         public Form1()
         {
             InitializeComponent();
-
-            manager = new Manager();
         }
 
-        private void btn_connect_Click(object sender, EventArgs e)
+        private void button_Papers_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(manager.Setup());
-        }        
+
+        }
+
+        private void button_Assignments_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Mark_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
