@@ -1,4 +1,4 @@
-﻿@Model firstMVC.Models.Holiday
+﻿@model firstMVC.Models.Holiday
 @{
     Layout = null;
 }
@@ -12,7 +12,8 @@
 </head>
 <body>
     <div> 
-        <p>Its @Model.</p>
+        <p>Its @Model.getDaysUntil() days until @Model.Name </p>        
+        <img style="height:500px; width:auto"  src="@Model.Picture"/>
     </div>
 </body>
 </html>
