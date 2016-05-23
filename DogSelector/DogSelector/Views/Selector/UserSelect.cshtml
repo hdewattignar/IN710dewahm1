@@ -10,80 +10,78 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>View2</title>
-    <h2>Welcome</h2>
-    <h3>Make selections below to find your perfect dog</h3>
-    <div>
-        <p>Must be good with children</p>
-        <form action"">
-            <input id="children" type="radio" value="Yes"/> Yes<br />
-            <input id="children" type="radio" value="No" /> No<br />
-        </form>
-
-        <p>Drooling</p><br />
-        <form action"">
-            <input id="drooling" type="radio" value="Yes" /> Yes<br />
-            <input id="drooling" type="radio" value="No" /> No<br />
-        </form>
-
-        <p>Coat Length</p><br />
-        <form action"">
-            <input id="coat" type="radio" value="Short" /> Short<br />
-            <input id="coat" type="radio" value="Medium" /> Medium<br />
-            <input id="coat" type="radio" value="Long" /> Long<br />
-        </form>
-
-        <p>Preferences</p><br />
-        <table style="width:100%;">
-        <tr>
-            <td>&nbsp;</td>
-            <td>Low</td>
-            <td>Medium</td>
-            <td>High</td>
-            <td>No Preference</td>
-        </tr>
-        <tr>
-            <td>Activity Level</td>
-            <td><input id="activity" type="radio" value="Low" /> Low</td>
-            <td><input id="activity" type="radio" value="Medium" /> Medium</td>
-            <td><input id="activity" type="radio" value="High" /> High</td>
-            <td><input id="activity" type="radio" value="No Preferences" /> No Preference</td>
-            </tr>
-        <tr>
-            <td>Shedding Level</td>
-            <td><input id="shedding" type="radio" value="Low" /> Low</td>
-            <td><input id="shedding" type="radio" value="Medium" /> Medium</td>
-            <td><input id="shedding" type="radio" value="High" /> High</td>
-            <td><input id="shedding" type="radio" value="No Preferences" /> No Preference</td>
-            </tr>
-        <tr>
-            <td>Grooming Level</td>
-            <td><input id="grooming" type="radio" value="Low" /> Low</td>
-            <td><input id="grooming" type="radio" value="Medium" /> Medium</td>
-            <td><input id="grooming" type="radio" value="High" /> High</td>
-            <td><input id="grooming" type="radio" value="No Preferences" /> No Preference</td>
-        </tr>
-        <tr>
-            <td>Intelligence Level</td>
-            <td><input id="intelligence" type="radio" value="Low" /> Low</td>
-            <td><input id="intelligence" type="radio" value="Medium" /> Medium</td>
-            <td><input id="intelligence" type="radio" value="High" /> High</td>
-            <td><input id="intelligence" type="radio" value="No Preferences" /> No Preference</td>
-        </tr>
-        </table>
-
-        <p>Preferred Size</p>
-        <select>
-            <option value="large">Large</option>
-            <option value="medium">Medium</option>
-            <option value="small">Small</option>
-        </select>
-
-        <input id="submit" type="submit" value="Submit" />
-        
-    </div>
 </head>
 <body>
-    <div> 
+    <div>
+        <h2>Welcome</h2>
+        <h3>Make selections below to find your perfect dog</h3>
+        <div>
+            <form action="UserSelect" method="post">
+
+            <p>Must be good with children</p>
+            <input id="children" type="radio" value="true" name="GoodWithChildren" /> Yes<br />
+            <input id="children" type="radio" value="false" name="GoodWithChildren" /> No<br />
+
+            <p>Drooling</p><br />
+            <input id="drooling" type="radio" value="true" name="Drools" /> Yes<br />
+            <input id="drooling" type="radio" value="false" name="Drools" /> No<br />
+
+
+            <p>Coat Length</p><br />
+            <input id="coat" type="radio" value="Short" name="Coatlength" /> Short<br />
+            <input id="coat" type="radio" value="Medium" name="Coatlength" /> Medium<br />
+            <input id="coat" type="radio" value="Long" name="Coatlength" /> Long<br />
+
+            <p>Preferences</p><br />
+            <table style="width:100%;">
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>Low</td>
+                    <td>Medium</td>
+                    <td>High</td>
+                    <td>No Preference</td>
+                </tr>
+                <tr>
+                    <td>Activity Level</td>
+                    <td><input id="activity" type="radio" value="Low" name="ActivityLevel" /> Low</td>
+                    <td><input id="activity" type="radio" value="Medium" name="ActivityLevel" /> Medium</td>
+                    <td><input id="activity" type="radio" value="High" name="ActivityLevel" /> High</td>
+                    <td><input id="activity" type="radio" value="No Preferences" name="ActivityLevel" /> No Preference</td>
+                </tr>
+                <tr>
+                    <td>Shedding Level</td>
+                    <td><input id="shedding" type="radio" value="Low" name="SheddingLevel" /> Low</td>
+                    <td><input id="shedding" type="radio" value="Medium" name="SheddingLevel" /> Medium</td>
+                    <td><input id="shedding" type="radio" value="High" name="SheddingLevel" /> High</td>
+                    <td><input id="shedding" type="radio" value="No Preferences" name="SheddingLevel" /> No Preference</td>
+                </tr>
+                <tr>
+                    <td>Grooming Level</td>
+                    <td><input id="grooming" type="radio" value="Low" name="GroomingLevel" /> Low</td>
+                    <td><input id="grooming" type="radio" value="Medium" name="GroomingLevel" /> Medium</td>
+                    <td><input id="grooming" type="radio" value="High" name="GroomingLevel" /> High</td>
+                    <td><input id="grooming" type="radio" value="No Preferences" name="GroomingLevel" /> No Preference</td>
+                </tr>
+                <tr>
+                    <td>Intelligence Level</td>
+                    <td><input id="intelligence" type="radio" value="Low" name="IntelligenceLevel" /> Low</td>
+                    <td><input id="intelligence" type="radio" value="Medium" name="IntelligenceLevel" /> Medium</td>
+                    <td><input id="intelligence" type="radio" value="High" name="IntelligenceLevel" /> High</td>
+                    <td><input id="intelligence" type="radio" value="No Preferences" name="IntelligenceLevel" /> No Preference</td>
+                </tr>
+            </table>
+
+            <p>Preferred Size</p>
+            <select>
+                <option value="large" name="Size">Large</option>
+                <option value="medium" name="Size">Medium</option>
+                <option value="small" name="Size">Small</option>
+            </select>
+
+            <input id="submit" type="submit" value="Submit" />
+            </form>
+        </div>
+
     </div>
 </body>
 </html>

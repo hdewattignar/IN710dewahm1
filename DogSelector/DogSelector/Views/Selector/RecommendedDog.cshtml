@@ -1,0 +1,65 @@
+﻿@model DogSelector.Models.Dog
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RecommendedDog</title>
+</head>
+<body>
+    <div> 
+
+        
+        <h1>Our recommendation is: @Model.DisplayName</h1>
+        
+        <img src="~/Content/Dog Images/@Model.ImageName" alt="" />
+        <table style="width:45%;">
+        <tr>
+            <td>Activity Level</td>
+            <td>@Model.ActivityLevel</td>            
+            </tr>
+        <tr>
+            <td>Shedding Level</td>
+            <td>@Model.SheddingLevel</td>            
+            </tr>
+        <tr>
+            <td>Grooming Level</td>
+            <td>@Model.GroomingLevel</td>
+            
+            </tr>
+        <tr>
+            <td>IntelligenceLevel</td>
+            <td>@Model.IntelligenceLevel</td>
+
+        </tr>
+        <tr>
+            <td>GoodWithChildren</td>
+            <td>@Model.GoodWithChildren</td>
+
+        </tr>
+        <tr>
+            <td>Drools</td>
+            <td>@Model.Drools</td>
+
+        </tr>
+        <tr>
+            <td>Coatlength</td>
+            <td>@Model.Coatlength</td>
+
+        </tr>
+        <tr>
+            <td>Size</td>
+            <td>@Model.Size</td>
+
+        </tr>        
+        </table>     
+        
+        <input id="Reset" type="button" value="button" />
+    </div>
+</body>
+</html>
